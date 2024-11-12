@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posadastech SRL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #3b0b61;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            color: #e0e0e0;
+        }
+
+        header .logo-container img {
+            width: 250px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            margin-top: 20px;
+            text-align: justify;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #b68fff;
+            border-bottom: 2px solid #3b0b61;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle, .content-block {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #e0e0e0;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service-item {
+            position: relative;
+            width: calc(33% - 40px);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            color: #e0e0e0;
+            text-align: left;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: opacity 0.3s;
+            border-radius: 10px;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .service-item h3 {
+            color: #b68fff;
+            font-size: 1.5em;
+            padding: 15px 20px 5px;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-item p {
+            padding: 0 20px 20px;
+            position: relative;
+            z-index: 1;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .service-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        /* Custom background images */
+        .service-item.fotografia {
+            background-image: url('img/el-soberbio.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-item.mapeo {
+            background-image: url('img/Screenshot-2022-12-28-09.49.13.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-item.videos {
+            background-image: url('img/5ffe06eab9222-1139b7.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .benefits, .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .benefit, .team-member {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            flex: 1 1 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .benefit h3, .team-member h3 {
+            color: #b68fff;
+            font-size: 1.5em;
+        }
+        .benefit {
+    position: relative;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+        .benefit:hover, .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #3b0b61;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="img/logosolopng.png" alt="Logo de Posadastech SRL"> <!-- Logo placeholder -->
+        </div>
+        <div class="header-content">
+            <h1>Posadastech SRL</h1>
+            <p>Desarrollo y aplicación de soluciones tecnológicas</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Main Mission Section with Landscape Images -->
+        <section class="section">
+            <h2 class="section-title">Nuestra Misión</h2>
+            <p class="section-subtitle">Transformamos la experiencia turística con datos precisos y tecnología innovadora.</p>
+            <div class="content-block">
+                <p>¿No sabes dónde ir a viajar?  </p>
+            </div>
+            <div class="content-block">
+                <p>¿Necesitas más información sobre lugares recomendados? </p>
+            </div>
+            <div class="content-block">
+                <p>Posadastech ofrece una plataforma con drones para recolectar datos geoespaciales y análisis avanzados para proporcionar información precisa y valiosa a la industria turística.</p>
+            </div>
+           
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section">
+            <h2 class="section-title">Beneficios para la Industria Turística</h2>
+            <div class="benefits">
+                <div class="benefit" style="background-image: url('img/informacion.jpeg'); background-size: cover; background-position: center;">
+                    <h3>Información</h3>
+                    <p>Información precisa y actualizada.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/experiencia.jpg'); background-size: cover; background-position: center;">
+                    <h3>Experiencia</h3>
+                    <p>Más de 5 años en el sector turístico.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/equipo.jpg'); background-size: cover; background-position: center;">
+                    <h3>Equipo</h3>
+                    <p>Equipo experimentado y especializado en cada sector.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/optimizacion.jpg'); background-size: cover; background-position: center;">
+                    <h3>Optimización</h3>
+                    <p>Incremento en la eficiencia operativa.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/tecnologia.png'); background-size: cover; background-position: center;">
+                    <h3>Tecnología</h3>
+                    <p>Tecnología de último nivel.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Producer Benefits Section -->
+        <section class="section">
+            <h2 class="section-title">Beneficios para los Productores</h2>
+            <div class="benefits">
+                <div class="benefit" style="background-image: url('img/organizado.jpg'); background-size: cover; background-position: center;">
+                    <h3>Organización</h3>
+                    <p>Control de plantaciones, ganado, etc.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/gestion.jpg'); background-size: cover; background-position: center;">
+                    <h3>Gestión</h3>
+                    <p>Sistema de manejo de productos/servicios.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/visibilidad.jpg'); background-size: cover; background-position: center;">
+                    <h3>Visibilidad Nacional</h3>
+                    <p>Reconocimiento en nuestro mapa de turismo.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/crecimiento.jpg'); background-size: cover; background-position: center;">
+                    <h3>Crecimiento</h3>
+                    <p>Crecimiento empresarial.</p>
+                </div>
+                <div class="benefit" style="background-image: url('img/ayuda\ y\ guia.jpeg'); background-size: cover; background-position: center;">
+                    <h3>Ayuda y Guía</h3>
+                    <p>Asesoramiento en procesos y manejo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section">
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="team" style="max-width: 800px; margin: 0 auto;">
+                <img src="img/nuestro.jpg" alt="Nuestro Equipo" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px; display: block; margin: 0 auto;">
+            </div>
+        </section>
+        
+        
+        
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Posadastech SRL - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
+
+
